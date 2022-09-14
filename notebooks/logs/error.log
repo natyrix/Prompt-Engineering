@@ -1,0 +1,32 @@
+2022-09-13 18:19:08,732:logger:the JSON object must be str, bytes or bytearray, not TextIOWrapper
+2022-09-13 18:20:09,691:logger:the JSON object must be str, bytes or bytearray, not list
+2022-09-13 18:54:16,774:logger:list indices must be integers or slices, not str
+2022-09-13 18:56:47,737:logger:list indices must be integers or slices, not str
+2022-09-13 18:57:00,346:logger:list indices must be integers or slices, not str
+2022-09-13 19:10:29,851:logger:list indices must be integers or slices, not str
+2022-09-13 19:11:28,113:logger:list indices must be integers or slices, not str
+2022-09-13 19:19:25,348:logger:'relations'
+2022-09-13 19:19:25,350:logger:'relations'
+2022-09-13 19:19:25,351:logger:'relations'
+2022-09-13 19:19:25,351:logger:'relations'
+2022-09-13 19:19:25,352:logger:'relations'
+2022-09-13 19:19:25,353:logger:'relations'
+2022-09-13 19:19:25,354:logger:'relations'
+2022-09-13 19:19:25,355:logger:'relations'
+2022-09-13 19:19:25,356:logger:'relations'
+2022-09-13 19:19:25,357:logger:'relations'
+2022-09-13 19:19:25,358:logger:'relations'
+2022-09-13 19:19:25,359:logger:'relations'
+2022-09-13 19:19:25,359:logger:'relations'
+2022-09-13 19:19:25,360:logger:'relations'
+2022-09-13 19:19:25,361:logger:'relations'
+2022-09-13 19:19:25,362:logger:'relations'
+2022-09-13 19:19:25,362:logger:'relations'
+2022-09-13 19:19:25,363:logger:'relations'
+2022-09-13 19:19:25,364:logger:'relations'
+2022-09-13 19:19:25,366:logger:'relations'
+2022-09-13 19:19:25,367:logger:'relations'
+2022-09-13 19:19:25,368:logger:'relations'
+2022-09-14 08:08:59,658:logger:'text'
+2022-09-14 08:09:53,932:logger:'dict' object has no attribute 'iteritems'
+2022-09-14 08:11:49,156:logger:'dict' object has no attribute 'iteritems'
