@@ -1,0 +1,3 @@
+matplotlib
+cohere==2.2.5
+cdifflib==1.2.6
