@@ -110,3 +110,20 @@
 2022-09-14 18:59:20,540:logger:Rquest successful
 2022-09-14 19:00:33,917:logger:Rquest successful
 2022-09-14 19:02:38,901:logger:Tokens converted to Dict
+2022-09-14 19:12:01,122:logger:Rquest successful
+2022-09-14 19:13:09,549:logger:Plotted result
+2022-09-14 19:18:30,029:logger:Rquest successful
+2022-09-14 19:20:20,930:logger:Rquest successful
+2022-09-14 19:21:46,433:logger:Rquest successful
+2022-09-14 19:22:19,510:logger:Rquest successful
+2022-09-14 19:22:53,590:logger:Values extracted.
+2022-09-14 19:23:18,553:logger:Values extracted.
+2022-09-14 19:23:34,341:logger:too many tokens: total number of tokens (prompt and prediction) cannot exceed 2048 - received 5319. Try using a shorter prompt or a smaller max_tokens value.
+2022-09-14 19:24:15,954:logger:Values extracted.
+2022-09-14 19:24:38,691:logger:too many tokens: total number of tokens (prompt and prediction) cannot exceed 2048 - received 2229. Try using a shorter prompt or a smaller max_tokens value.
+2022-09-14 19:25:33,307:logger:Values extracted.
+2022-09-14 19:26:06,936:logger:Rquest successful
+2022-09-14 19:26:40,427:logger:Rquest successful
+2022-09-14 19:27:20,197:logger:Rquest successful
+2022-09-14 19:29:49,232:logger:Values extracted.
+2022-09-14 19:30:22,841:logger:Values extracted.

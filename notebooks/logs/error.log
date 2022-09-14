@@ -30,3 +30,5 @@
 2022-09-14 08:08:59,658:logger:'text'
 2022-09-14 08:09:53,932:logger:'dict' object has no attribute 'iteritems'
 2022-09-14 08:11:49,156:logger:'dict' object has no attribute 'iteritems'
+2022-09-14 19:23:34,341:logger:too many tokens: total number of tokens (prompt and prediction) cannot exceed 2048 - received 5319. Try using a shorter prompt or a smaller max_tokens value.
+2022-09-14 19:24:38,691:logger:too many tokens: total number of tokens (prompt and prediction) cannot exceed 2048 - received 2229. Try using a shorter prompt or a smaller max_tokens value.
