@@ -1,0 +1,209 @@
+Job Description: 
+Currently holding a faculty, industry, or government researcher position.
+Ph.D. and publications in machine learning, AI, computer science, statistics, applied mathematics, data science, or related technical fields.
+Experience leading a team in solving analytical problems using quantitative approaches.
+Experience manipulating and analyzing data from different sources.
+Experience in theoretical and empirical research and for answering questions with research.
+Ability to communicate research for public audiences of peers.
+Knowledge in a programming language.
+Ability to obtain and maintain work authorization in the country of employment in 2018.
+
+PREFERRED 
+1+ year(s) of work experience in a university, industry, or government lab(s), in a role with primary emphasis on AI research.
+Experience driving original scholarship in collaboration with a team.
+First-author publications at peer-reviewed AI conferences (e.g. NIPS, CVPR, ICML, ICLR, ICCV, and ACL).
+Experience in developing and debugging in C/C++, Python, C# and/or Java.
+DIPLOMA: Ph.D.
+DIPLOMA_MAJOR: machine learning,AI,computer science,statistics,applied mathematics,data science
+EXPERIENCE: 1+ year(s
+SKILLS: university,industry,government lab(s),AI
+
+--
+Job Description: 
+2+ years experience in the online advertising or research
+BS/BA Degree in Economics, Statistics, Political Science, History, Psychology
+Experience with presenting and partnering with technical and non-technical teams
+Experience communicating analyses and results to any audience
+Experience working with structured and unstructured data-sets, statistical software such as R, STATA, SPSS, SAS as well as data extraction tools such as Hive and/or SQL
+
+PREFERRED 
+Experience with causal measurement, machine learning or lab-based research
+Experience in quantitative field, such as consulting, market research, strategy and planning, or user experience research
+Strong organizational and project management skills
+Masters in quantitative field or a MBA
+EXPERIENCE: 2+ years
+SKILLS: online advertising,research
+DIPLOMA: BS/BA,Masters
+DIPLOMA_MAJOR: Economics,Statistics,Political Science,History,Psychology,quantitative field
+
+--
+Job Description: 
+BA/BS
+5+ years of program or project management experience
+2+ years of technical project/program management experience
+Track record of operating independently
+Experience understanding user needs, gathering requirements, and defining scope
+Communication experience interacting with a variety of audiences from engineers, to vendors, to research leaders
+Track record of building cross-functional relationships
+
+PREFERRED 
+Experience working with UX Research and/or UX Design
+EXPERIENCE: 5+ years,2+ years
+SKILLS: project management,technical project,program management
+
+--
+Job Description: 
+Currently enrolled in a full-time degree program and returning to the program after the completion of the internship.
+Publications or experience in fields related to in machine learning, AI, computer vision, natural language processing, computational neuroscience, optimization, computer science, statistics, applied mathematics, or data science.
+Experience solving analytical problems using quantitative approaches.
+Ability to manipulate and analyze large scale, high-dimensionality data from varying sources.
+Experience in utilizing theoretical and empirical research to solve problems.
+Ability to communicate research for public audiences of peers.
+Knowledge in a programming language.
+Ability to obtain and maintain work authorization in the country of employment in 2018.
+
+PREFERRED 
+Pursuing a Ph.D. degree in Computer Science or related field
+First-author publications at peer-reviewed AI conferences (e.g. NIPS, ICML, ICLR, CVPR, ICCV, ECCV, ACL, NAACL, and EMNLP).
+Experience building systems based on machine learning and/or deep learning methods.
+Research and software engineer experience demonstrated via an internship, work experience, or coding competitions.
+Knowledge in Python, Lua, C++, C, C# and/or Java.
+DIPLOMA: Ph.D.
+DIPLOMA_MAJOR: Computer Science
+
+--
+Job Description: 
+Currently enrolled in a full-time degree program and returning to the program after the completion of the internship.
+Publications or experience in fields related to in machine learning, AI, computer vision, natural language processing, computational neuroscience, optimization, computer science, statistics, applied mathematics, or data science.
+Experience solving analytical problems using quantitative approaches.
+Ability to manipulate and analyze large scale, high-dimensionality data from varying sources.
+Experience in utilizing theoretical and empirical research to solve problems.
+Ability to communicate research for public audiences of peers.
+Knowledge in a programming language.
+Ability to obtain and maintain work authorization in the country of employment in 2019.
+
+PREFERRED 
+Pursuing a Ph.D. degree in Computer Science or related field.
+First-author publications at peer-reviewed AI conferences (e.g. NIPS, ICML, ICLR, CVPR, ICCV, ECCV, ACL, NAACL, and EMNLP).
+Experience building systems based on machine learning and/or deep learning methods.
+Research and software engineer experience demonstrated via an internship, work experience, or coding competitions.
+Knowledge in Python, Lua, C++, C, C# and/or Java.
+
+DIPLOMA: Ph.D.
+DIPLOMA_MAJOR: Computer Science
+
+--
+Job Description: 
+MS in a quantitative field such as Operations Research, Computer Science, Quantitative Finance, Math, Physics or a related Engineering degree
+Knowledge of Statistics & Probability (e.g. Hypothesis testing, Regression, Stochastic modeling, Markov Chains and etc.)
+7+ years experience in building models and developing algorithms for machine learning, statistics, mathematical programming, and simulation in industry and/or academia
+5+ years experience in managing and analyzing large-scale structured and unstructured data using R or Python
+7+ years experience with algorithms and optimizations using CPLEX or related tools
+7+ years experience in SQL and data modeling
+
+PREFERRED 
+PhD in Operation Research or Industrial Engineering.
+Familiarity with object-oriented programming languages (such as C++ or Java) and visualization tools (such as Tableau).
+Experience working with or in support of diverse communities.
+DIPLOMA: MS,PhD
+DIPLOMA_MAJOR: Operations Research,Computer Science,Quantitative Finance,Math,Physics,Engineering,Operation Research,Industrial Engineering
+EXPERIENCE: 7+ years,5+ years,7+ years,7+ years
+SKILLS: building models,developing algorithms,machine learning,statistics,mathematical programming,simulation,industry,academia,managing,analyzing large-scale structured and unstructured data,R,Python,algorithms,optimizations,CPLEX,SQL,data modeling
+
+--
+Job Description: 
+Ph.D. with 5+ years of experience, MS with 7+ years of experience, or BS with 10+ years of experience in Physics, Electrical Engineering, Computer Science, or a related technical field such us architecting, developing, and launching hardware/software projects and/or services
+Demonstrated knowledge dissemination through authored publications, international conference presentations or shipped products
+ML/AI basics, and systems basics, including the requisite programming experience (python or equivalent, and at least one systems-level programming language: C, C++, Java, Go, Rust, or equivalent)
+Experience with data analytics  (data collection, storage, cleaning, processing with statistics, visualization, and other data related processes)
+Experience working on communication systems in a research and/or development capacity
+Technical leadership in leading research efforts with a demonstrated experience handling multiple priorities
+
+PREFERRED 
+Deep understanding of how culture and team dynamics create exceptional teams
+
+--
+Job Description: 
+Graduating with a Ph.D. in Computer Science or related field or relevant experience.
+First-author publications at peer-reviewed AI conferences (e.g. NIPS, CVPR, ICML, ICLR, ICCV, and ACL).
+Experience leading a team in solving analytical problems using quantitative approaches.
+Experience manipulating and analyzing data from different sources.
+Experience in leading theoretical and empirical research and for answering questions with research.
+Experience communicating research for public audiences of peers.
+Knowledge in a programming language.
+Must be able to obtain and maintain work authorization in the country of employment in 2018.
+
+PREFERRED 
+Previous internship(s) and/or research assistantship(s) in an AI research organization.
+Experience in developing and debugging in C/C++, Python, C# and/or Java.
+Has previously completed a postdoctoral role in AI research.
+DIPLOMA: Ph.D.
+DIPLOMA_MAJOR: Computer Science
+
+--
+Job Description: 
+12+ years of research experience, in-house or as a vendor (including applicable consulting experience)
+Ph.D in human-computer interaction, human factors, cognitive psychology or related field
+User safety demonstrated knowledge through authored publications, international conference presentations or shipped products
+Experience collaborating and working across teams to develop concepts that advance the entire product pipeline (hardware, software, computer vision, etc.)
+EXPERIENCE: 12+ years
+SKILLS: research,Ph.D
+DIPLOMA_MAJOR: human-computer interaction,human factors,cognitive psychology
+
+--
+Job Description: 
+PhD with 3+ years, or MS with 5+ years of experience in a field emphasizing people research in organizations (e.g., Industrial/Organizational Psychology, Organizational Behavior, Labor Economics, Management, Policy Analysis, etc.)
+3+ years of experience conducting quantitative people research in an organization or consulting environment, including working with stakeholders to understand and clarify their people research needs, and communicating analyses to technical and non-technical audiences
+Experience managing and analyzing structured and unstructured data
+Experience communicating technical results to technical and non-technical audiences
+Experience operating in a consultative capacity with stakeholders
+Experience defining a roadmap of data requirements, metrics reporting, and research to drive insights
+Experience in communicating and weaving together multiple data sources and deliver insights to stakeholders
+Knowledge of statistical analysis (e.g., descriptive statistics and knowledge with statistical significance), quantitative research, and experience gathering and interpreting data
+
+PREFERRED 
+3+ years of experience applying multivariate statistical methods to people research problems in organizations
+5+ years of progressive consulting or corporate work experience focused on using data to uncover insights that drive action and communicating analyses to technical and non-technical audiences
+Relevant experience includes analytics, management consulting, sales operations, finance, compensation, or related fields
+People management experience
+Experience developing tools, conducting empirical research, practical implementation, knowledge of best practices in at least two of the following areas: employee engagement, performance management, diversity, compensation (e.g., pay equity), or retention
+Experience conceiving, developing, running pilot tests, implementing, and continuously improving large-scale people processes
+Experience managing and analyzing structured and unstructured data with R and SQL
+EXPERIENCE: 5+ years,3+ years,3+ years,5+ years
+SKILLS: emphasizing people research in organizations,Industrial,Organizational Psychology,Organizational Behavior,Labor Economics,Management,Policy Analysis,conducting quantitative people research,working with stakeholders,communicating,statistical methods,progressive consulting,corporate work experience,using data to uncover insights that drive action,communicating
+
+--
+Job Description: 
+Currently holding a faculty, industry, or government researcher position.
+Ph.D. and publications in machine learning, AI, computer science, statistics, applied mathematics, data science, or related technical fields.
+Experience leading a team in solving analytical problems using quantitative approaches.
+Experience solving analytical problems using quantitative approaches.
+Experience manipulating and analyzing data from different sources.
+Experience in theoretical and empirical research and for answering questions with research.
+Ability to communicate research.
+Knowledge in some programming language.
+Traduction franaise -  minimales:
+Occuper actuellement un poste de chercheur dans une facult, une industrie ou un gouvernement.
+Doctorat et des publications sur l'apprentissage automatique, l'intelligence artificielle, l'informatique, les statistiques, les mathmatiques appliques, la science des donnes ou des domaines techniques connexes.
+Exprience de la direction dune quipe dans la rsolution de problmes analytiques  laide dapproches quantitatives.
+Exprience en manipulation et analyse de donnes provenant de diffrentes sources.
+Rpondre  des questions avec la recherche
+capacit  communiquer la recherche.
+Connaissances dans certains langages de programmation.
+
+PREFERRED 
+1+ year(s) of work experience in within a university, industry, or government lab(s), in a role with primary emphasis on AI research.
+Experience driving original scholarship in collaboration with a team.
+First-author publications at peer-reviewed AI conferences (e.g. NIPS, CVPR, ICML, ICLR, ICCV, and ACL).
+Experience in developing and debugging in C/C++, Python, C# and/or Java.
+Traduction franaise -  prfres:
+1 an ou plus d'exprience de travail dans une universit, une industrie ou un laboratoire gouvernemental, dans un rle principalement ax sur la recherche sur l'IA.
+Exprience de la conduite de la bourse originale en collaboration avec une quipe.
+Publications du premier auteur lors de confrences sur lIA examines par des pairs (par exemple NIPS, CVPR, ICML, ICLR, ICCV et ACL).
+Exprience dans le dveloppement et le dbogage en C / C ++, Python, C # et / ou Java.
+DIPLOMA: Ph.D.
+DIPLOMA_MAJOR: machine learning,AI,computer science,statistics,applied mathematics,data science
+EXPERIENCE: 1+ year(s)
+SKILLS: industry
+
+--
