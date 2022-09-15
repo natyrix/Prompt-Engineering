@@ -13,13 +13,13 @@ class PromptPipeline():
         self.techniques_list = ['technique1']
         self.currernt_technique = currernt_technique
 
-    def send_request_to_cohere(self, co, prompt):
+    def send_request_to_cohere(self, co, prompt, model='xlarge'):
         """
             Sends an API request to cohere and reuturns the response
         """
         try:
             response = co.generate( 
-                model='xlarge', 
+                model=model, 
                 prompt=prompt, 
                 max_tokens=400, 
                 temperature=0.5, 
