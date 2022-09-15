@@ -4,10 +4,10 @@ import sys
 import os
 
 
-class TestDataClean(unittest.TestCase):
-    def setUp(self) -> None:
-        pass
+# class TestDataClean(unittest.TestCase):
+#     def setUp(self) -> None:
+#         pass
 
 
-if __name__ == "__main__":
-    unittest.main()
+# if __name__ == "__main__":
+#     unittest.main()
