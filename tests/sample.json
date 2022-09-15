@@ -1,0 +1,68 @@
+{
+    "document": "Bachelor's degree in Mechanical Engineering or Physical Science 3+ years track record of developing or specifying fiber optic cables and connector related products Knowledge of fiber optic component, cabling, and interconnect products, technologies, and standards Experience in statistical data analysis Experience with product life cycle management (PLM) process Experience providing solutions to problems and meeting deadlines Experience engaging stakeholders PREFERRED Advanced degree Experience using a software tool for statistical data analysis such as JMP Experience using Agile as product life-cycle management tool Data center or other mission critical development experience",
+    "tokens": [
+      {
+        "text": "Bachelor",
+        "start": 0,
+        "end": 8,
+        "token_start": 0,
+        "token_end": 0,
+        "entityLabel": "DIPLOMA"
+      },
+      {
+        "text": "Mechanical Engineering",
+        "start": 21,
+        "end": 43,
+        "token_start": 4,
+        "token_end": 5,
+        "entityLabel": "DIPLOMA_MAJOR"
+      },
+      {
+        "text": "Physical Science",
+        "start": 47,
+        "end": 63,
+        "token_start": 7,
+        "token_end": 8,
+        "entityLabel": "DIPLOMA_MAJOR"
+      },
+      {
+        "text": "3+ years",
+        "start": 64,
+        "end": 72,
+        "token_start": 9,
+        "token_end": 11,
+        "entityLabel": "EXPERIENCE"
+      },
+      {
+        "text": "developing",
+        "start": 89,
+        "end": 99,
+        "token_start": 15,
+        "token_end": 15,
+        "entityLabel": "SKILLS"
+      },
+      {
+        "text": "fiber optic cables",
+        "start": 114,
+        "end": 132,
+        "token_start": 18,
+        "token_end": 20,
+        "entityLabel": "SKILLS"
+      },
+      {
+        "text": "connector related products",
+        "start": 137,
+        "end": 163,
+        "token_start": 22,
+        "token_end": 24,
+        "entityLabel": "SKILLS"
+      }
+    ],
+    "relations": [
+      { "child": 4, "head": 0, "relationLabel": "DEGREE_IN" },
+      { "child": 7, "head": 0, "relationLabel": "DEGREE_IN" },
+      { "child": 15, "head": 9, "relationLabel": "EXPERIENCE_IN" },
+      { "child": 18, "head": 9, "relationLabel": "EXPERIENCE_IN" },
+      { "child": 22, "head": 9, "relationLabel": "EXPERIENCE_IN" }
+    ]
+  }
