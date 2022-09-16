@@ -163,7 +163,7 @@ class PromptPipeline():
         try:
             for d in data:
                 s+='Job Description: '
-                s+=d['document']
+                s+=str(d['document']).strip().replace('\n', ' ').strip()
                 s+='\n'
                 """
                     Extract entities from tokens
