@@ -5,6 +5,7 @@ from urllib import response
 import matplotlib.pyplot as plt
 import operator
 import cohere
+import random
 from dotenv import load_dotenv
 from difflib import SequenceMatcher
 
@@ -13,7 +14,7 @@ from logger import logger
 
 
 class JDPipeline():
-    def __init__(self, inputval, model='xlarge', prompt_type='1') -> None:
+    def __init__(self, inputval, model='xlarge', prompt_type=1) -> None:
         self.data = {}
         with open('./data/job_description_train_cleaned.json', 'r') as f:
             self.data = json.loads(f.read())
@@ -84,7 +85,7 @@ class JDPipeline():
 
     def prepare_prompt(self):
         p_val = self.prompt_type
-        if p_val == '1':
+        if p_val == 1:
             prompt_data = []
             similarity = {}
             for i, d in enumerate(self.data):
@@ -98,7 +99,8 @@ class JDPipeline():
                 if i>=max_p: break
             self.pr_data = self.extract_values(prompt_data)
         else:
-            pass
+            rand_items = random.sample(self.data, 3)
+            self.pr_data = self.extract_values(rand_items)
     
 
     def extract_values(self, data):

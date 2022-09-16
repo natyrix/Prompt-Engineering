@@ -19,11 +19,16 @@ def home():
     try:
         if request.method == 'POST':
             j_d = request.form['j_d']
+            ch_model = request.form['model']
+            prompt_type = request.form['prompt_type']
             # print(j_d)
             if len(j_d.strip()) == 0:
                 raise Exception("Job Description required")
             else:
-                jdpipeline = JDPipeline(j_d)
+                model = 'xlarge'
+                if int(ch_model) != 1:
+                    model = '544c8386-258a-4615-8fae-ce64d4255556-ft'
+                jdpipeline = JDPipeline(j_d, model=model, prompt_type=int(prompt_type))
                 response,val = jdpipeline.make_request()
                 # print(jdpipeline.pr_data)
                 return render_template('home.html', title='Home', error_text='', response=response, process_dict=val)
