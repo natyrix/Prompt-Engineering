@@ -1,0 +1,6 @@
+services:
+  streamlit:
+    container_name: "Prompt_Engineering"
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
