@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href='/staticFiles/main.css' />
+        <link rel="stylesheet" href='/staticFiles/form.css' />
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/docs">Docs</a></li>
+          </ul>
+
+          <div class="row">
+            <div class="form">
+                <h3>Enter your Job Description</h3>
+                
+                <form action="{{ url_for('home') }}" method="post">
+                    <label for="j_d">Job Description:</label>
+                    <textarea id="j_d" name="j_d" rows="4" cols="50">
+                    </textarea>
+                
+                    
+                    <!-- <select id="is_promo" name="is_promo">
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                    </select> -->
+                  
+                    <input type="submit" value="Submit">
+                  </form>
+            </div>
+            <div class="form">
+                
+            </div>
+        </div>
+    </body>
+</html>
