@@ -16,7 +16,7 @@ from logger import logger
 class JDPipeline():
     def __init__(self, inputval, model='xlarge', prompt_type=1) -> None:
         self.data = {}
-        with open('./data/job_description_train_cleaned.json', 'r') as f:
+        with open('./data/job_description_train_cleaned_1.json', 'r') as f:
             self.data = json.loads(f.read())
         self.inputval = inputval
         self.model = model
