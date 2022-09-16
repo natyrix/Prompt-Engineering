@@ -10,27 +10,49 @@
             <li><a href="/docs">Docs</a></li>
           </ul>
 
-          <div class="row">
-            <div class="form">
-                <h3>Enter your Job Description</h3>
+        <div class="row">
+        <div class="form">
+            <h3>Enter your Job Description</h3>
+            
+            <form action="{{ url_for('home') }}" method="post">
+                <span>
+                    If you are not happy with the result try to change model and prompt type
+                </span>
+                <hr>
+                <label for="j_d">Job Description:</label>
+                <textarea id="j_d" name="j_d" rows="4" cols="50" required="true">
+                </textarea>
+            
+                <label for="model">Model:</label>
+                <select id="model" name="model">
+                    <option value="xlarge">Default(xlarge)</option>
+                    <option value="2">Fine Tuned</option>
+                </select>
+
+                <label for="prompt_type">Prompt Type:</label>
+                <select id="prompt_type" name="prompt_type">
+                    <option value="1">Default(Most 3 similar)</option>
+                    <option value="2">Random</option>
+                </select>
                 
-                <form action="{{ url_for('home') }}" method="post">
-                    <label for="j_d">Job Description:</label>
-                    <textarea id="j_d" name="j_d" rows="4" cols="50">
-                    </textarea>
-                
-                    
-                    <!-- <select id="is_promo" name="is_promo">
-                      <option value="0">No</option>
-                      <option value="1">Yes</option>
-                    </select> -->
-                  
-                    <input type="submit" value="Submit">
-                  </form>
-            </div>
-            <div class="form">
-                
-            </div>
+                <input type="submit" value="Submit">
+                </form>
+        </div>
+        <div class="form">
+            
+        </div>
+        </div>
+        <div style="margin: 0 10%;">
+            <p style="color: red;">{{error_text}}</p>
+            {% if response -%}
+                {% if process_dict -%}
+                    {% for k,v in response.items() %}
+                        <p>{{k}}: {{v}}</p>
+                    {% endfor %}
+                {% else %}
+                    <p>{{response}}</p>
+                {% endif %}
+            {% endif %}
         </div>
     </body>
 </html>

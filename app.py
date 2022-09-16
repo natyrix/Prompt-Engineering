@@ -16,12 +16,23 @@ app = Flask(__name__, static_folder='staticFiles')
 @app.route('/')
 @app.route('/home', methods=['GET', 'POST'])
 def home():
-    if request.method == 'POST':
-
-        return render_template('home.html', title='Home')
-    
-    return render_template('home.html', title='Home')
-    
+    try:
+        if request.method == 'POST':
+            j_d = request.form['j_d']
+            # print(j_d)
+            if len(j_d.strip()) == 0:
+                raise Exception("Job Description required")
+            else:
+                jdpipeline = JDPipeline(j_d)
+                response,val = jdpipeline.make_request()
+                # print(jdpipeline.pr_data)
+                return render_template('home.html', title='Home', error_text='', response=response, process_dict=val)
+                
+        
+        return render_template('home.html', title='Home', error_text='')
+    except Exception as e:
+        return render_template('home.html', title='Home', error_text=str(e))
+        
 
 
 
