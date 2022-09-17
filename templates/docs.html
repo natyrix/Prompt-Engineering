@@ -6,8 +6,63 @@
     <body>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/docs">Dccs</a></li>
+            <li><a href="/docs">Docs</a></li>
           </ul>
-          <h1>DOCS</h1>
+          <div class="" style="margin: 0 5%;">
+            <h1>API Documentation</h1>
+            <h3>How To Use The API</h3>
+            <div class="code">
+                <code>1. api/jdentities</code>
+            </div>
+            <h5>Request: </h5>
+            <div class="code">
+<pre>
+    <code>
+    http://[ip_address]/api/jdentities
+    json body
+        {
+            "j_d":"Your Job Description",
+            "ch_model":1 or 2  // 1-> Default Model('xlarge'). 
+                            // 2-> Fine Tuned Model
+            "pr_type": 1 or 2   // 1-> Default or Pick 3 Similar Job Description from Trian Data. 
+                                // 2-> Pick 3 Random Job Description from Trian Data.
+        }
+    </code>
+</pre>
+
+            </div>
+            <h5>Response: </h5>
+            <div class="code">
+<pre>
+    <code>
+    http://[ip_address]/api/jdentities
+    
+    response body for model 1(xlarge)
+    {
+        "message": "Entity Extracted",
+        "response": {
+          "Job Description": "  Experience with Java 
+                                Experience with Spring Boot
+                                Experience with Spring Batch
+                                Experience with Maven 
+                                Experience with JPA/Hibernate 
+                                Experience with RESTful APIs 
+                                Experience with JSON 
+                                Experience with unit testing
+                                Experience with CI/CD
+                                Experience with Git 
+                                Experience with JIRA
+                                Experience with Agile
+                                Experience with Scrum
+                                Experience with SQL
+                                Experience with Tomcat
+                                Experience with Docker 
+                                "
+        },
+        "success": true
+      }
+    </code>
+</pre>
+          </div>
     </body>
 </html>

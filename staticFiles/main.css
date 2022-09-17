@@ -29,3 +29,9 @@ text-decoration: none;
 li a:hover {
 background-color: #111;
 }
+
+.code{
+    font-size: 1rem;
+    padding: 3%;
+    background-color: azure;
+}
