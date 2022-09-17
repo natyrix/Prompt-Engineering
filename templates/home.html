@@ -45,7 +45,48 @@
                 </form>
         </div>
         <div class="form">
+            <h3>Enter your News Information</h3>
             
+            <form action="{{ url_for('news') }}" method="post">
+                <hr>
+
+                <label for="title">Title:</label>
+                <input type="text" id="title" min="1" max="5" name="title" placeholder="Title" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" cols="50" required="true">
+                </textarea>
+
+                <label for="body">Body:</label>
+                <textarea id="body" name="body" rows="4" cols="50" required="true">
+                </textarea>
+
+                <label for="model">Model:</label>
+                <select id="model" name="model">
+                    <option value="1">Classify</option>
+                    <option value="2">Embed</option>
+                </select>
+
+                <!-- <label for="num_example">Number of Examples</label>
+                <input type="number" value="3" id="num_example" min="1" max="5" name="num_example" placeholder="Number of Examples" required>
+
+                <label for="num_token">Number of Tokens</label>
+                <input type="number" value="100" id="num_token" min="100" max="250" name="num_token" placeholder="Number of Tokens" required>
+            
+                <label for="model">Model:</label>
+                <select id="model" name="model">
+                    <option value="1">Default(xlarge)</option>
+                    <option value="2">Fine Tuned</option>
+                </select>
+
+                <label for="prompt_type">Prompt Type:</label>
+                <select id="prompt_type" name="prompt_type">
+                    <option value="1">Default(Most 3 similar)</option>
+                    <option value="2">Random</option>
+                </select> -->
+                
+                <input type="submit" value="Submit">
+                </form>
         </div>
         </div>
         <div style="margin: 0 10%;">
