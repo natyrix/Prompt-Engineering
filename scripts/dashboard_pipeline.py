@@ -1,9 +1,19 @@
+from select import select
 import sys
 import os
 import json
 from urllib import response
 import matplotlib.pyplot as plt
 import operator
+import cohere
+from cohere.classify import Example
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import f1_score
+from sklearn.svm import SVC
+from sklearn import preprocessing
 import cohere
 import random
 from dotenv import load_dotenv
@@ -156,4 +166,86 @@ class JDPipeline():
         # except Exception as e:
         #     logger.error(e)
     
+
+
+class NewsPipeline():
+    def __init__(self, title, desc, body, model=1) -> None:
+        self.title = title
+        self.desc = desc
+        self.body = body
+        self.model = model
+        self.df = pd.read_csv('./data/news_processed.csv')
+        API_KEY = os.getenv('API_KEY')
+        self.co = cohere.Client(API_KEY)
+
+    def make_score(self):
+        self.preprocess_inputs()
+        if self.model == 1:
+            result = self.do_classify()
+            return self.post_process(result)
+        else:
+            result = self.do_embed()
+            return result[0]
+
+    def post_process(self, res):
+        result = str(res).split('__')
+        print(result)
+        num_result = ''
+        num_result += str(int(result[1].split('_')[1]) - 1)
+        num_result +='.'
+        num_result += str(int(result[2].split('_')[1]) - 1)
+        num_result += str(int(result[3].split('_')[1]) - 1)
+        return num_result
+
+
+
+
+    def preprocess_inputs(self):
+        self.title = str(self.title).strip().replace('\n', ' ').strip()
+        self.body = str(self.body).strip().replace('\n', ' ').strip()
+        self.desc = str(self.desc).strip().replace('\n', ' ').strip()
+
+    def do_classify(self):
+        X,y = self.df['Title'], self.df['final_score']
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1, random_state=21)
+        intents = y_train.unique().tolist()
+        ex_texts, ex_labels = [], []
+        for intent in intents:
+            ex_texts += X_train.tolist()
+            ex_labels += y_train.tolist()
+        examples = list()
+        for txt, lbl in zip(ex_texts,ex_labels):
+            examples.append(Example(txt,lbl))
+        def classify_text(text,examples):
+            classifications = self.co.classify(
+                model='xlarge',
+                inputs=[text],
+                examples=examples
+                )
+            return classifications.classifications[0].prediction
+        return classify_text(self.title, examples=examples)
+
+    
+    def do_embed(self):
+        X,y = self.df['desc_context_txt'], self.df['final_score']
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1, random_state=21)
+        def embed_text(text):
+            output = self.co.embed(model='medium',texts=text)
+            return output.embeddings
+        X_train_emb = np.array(embed_text(X_train.tolist()))
+        X_test_emb = np.array(embed_text([self.desc]))
+
+        le = preprocessing.LabelEncoder()
+        le.fit(y_train)
+        y_train_le = le.transform(y_train)
+        y_test_le = le.transform(y_test)
+
+        # Initialize the model
+        svm_classifier = SVC(class_weight='balanced')
+
+        # Fit the training dataset to the model
+        svm_classifier.fit(X_train_emb, y_train_le)
+
+        return svm_classifier.predict(X_test_emb)
+
 
