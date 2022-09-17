@@ -14,12 +14,13 @@ from logger import logger
 
 
 class JDPipeline():
-    def __init__(self, inputval, model='xlarge', prompt_type=1) -> None:
+    def __init__(self, inputval, model='xlarge', prompt_type=1,num_tokens=100) -> None:
         self.data = {}
         with open('./data/job_description_train_cleaned_1.json', 'r') as f:
             self.data = json.loads(f.read())
         self.inputval = inputval
         self.model = model
+        self.num_tokens = num_tokens
         self.prompt_type = prompt_type
         API_KEY = os.getenv('API_KEY')
         self.co = cohere.Client(API_KEY)
@@ -62,11 +63,13 @@ class JDPipeline():
     def send_request(self):
         prompt = self.pr_data
         prompt+=f'Job Description: {self.inputval}'
+        logger.info(prompt)
+
         # try:
         response = self.co.generate( 
             model=self.model, 
             prompt=prompt, 
-            max_tokens=150, 
+            max_tokens=self.num_tokens, 
             temperature=0.5, 
             k=0, 
             p=1, 
