@@ -29,6 +29,7 @@
             "num_token": 100-250 // number of tokens to generate
             "num_example": 1-5 // number of Examples to use
         }
+        
     </code>
 </pre>
 
@@ -40,6 +41,20 @@
     http://[ip_address]/api/jdentities
     
     response body for model 1(xlarge)
+    {
+        "message": "Entity Extracted",
+        "response": {
+          "DIPLOMA": " Ph.D.",
+          "DIPLOMA_MAJOR": " Computer Science",
+          "EXPERIENCE": " 1+ year(s)",
+          "SKILLS": " programming language,deep learning frameworks,machine learning algorithms,
+                        open-source software development"
+        },
+        "success": true
+      }
+
+      response body for model 2(Fine Tuned)
+
     {
         "message": "Entity Extracted",
         "response": {
