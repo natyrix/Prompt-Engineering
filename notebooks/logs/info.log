@@ -136,3 +136,62 @@
 2022-09-14 20:12:13,761:logger:Rquest successful
 2022-09-14 20:27:08,147:logger:Values extracted.
 2022-09-14 20:35:02,293:logger:Values extracted.
+2022-09-17 16:45:11,178:logger:../data/job_description_train_cleaned.json with version jdtrain_v1_cleaned Loaded
+2022-09-17 16:45:16,084:logger:../data/job_description_test_cleaned.json with version jdtest_v1_cleaned Loaded
+2022-09-17 16:48:27,041:logger:Values extracted.
+2022-09-17 16:48:31,415:logger:Rquest successful
+2022-09-17 16:49:02,556:logger:Values extracted.
+2022-09-17 16:49:07,078:logger:Rquest successful
+2022-09-17 16:49:10,070:logger:Values extracted.
+2022-09-17 16:49:14,667:logger:Rquest successful
+2022-09-17 16:50:40,097:logger:../data/job_description_train_cleaned.json with version jdtrain_v1_cleaned Loaded
+2022-09-17 16:50:42,029:logger:../data/job_description_test_cleaned.json with version jdtest_v1_cleaned Loaded
+2022-09-17 16:50:51,828:logger:Values extracted.
+2022-09-17 16:50:56,239:logger:Rquest successful
+2022-09-17 16:52:51,656:logger:../data/job_description_train_cleaned.json with version jdtrain_v1_cleaned Loaded
+2022-09-17 16:53:10,386:logger:../data/job_description_test_cleaned.json with version jdtest_v1_cleaned Loaded
+2022-09-17 16:53:22,534:logger:Values extracted.
+2022-09-17 16:53:26,865:logger:Rquest successful
+2022-09-17 16:54:26,924:logger:../data/job_description_train_cleaned.json with version jdtrain_v1_cleaned Loaded
+2022-09-17 16:54:30,227:logger:../data/job_description_test_cleaned.json with version jdtest_v1_cleaned Loaded
+2022-09-17 16:54:41,335:logger:Values extracted.
+2022-09-17 16:54:45,641:logger:Rquest successful
+2022-09-17 17:11:57,818:logger:../data/job_description_train_cleaned.json with version jdtrain_v1_cleaned Loaded
+2022-09-17 17:12:01,185:logger:../data/job_description_test_cleaned.json with version jdtest_v1_cleaned Loaded
+2022-09-17 17:18:19,485:logger:../data/job_description_train_cleaned.json with version jdtrain_v1_cleaned Loaded
+2022-09-17 17:18:19,671:logger:../data/job_description_test_cleaned.json with version jdtest_v1_cleaned Loaded
+2022-09-17 17:19:32,871:logger:../data/job_description_train_cleaned.json with version jdtrain_v1_cleaned Loaded
+2022-09-17 17:19:32,960:logger:../data/job_description_test_cleaned.json with version jdtest_v1_cleaned Loaded
+2022-09-17 17:20:01,224:logger:Values extracted.
+2022-09-17 17:20:05,811:logger:Rquest successful
+2022-09-17 17:24:25,824:logger:Values extracted.
+2022-09-17 17:24:30,277:logger:Rquest successful
+2022-09-17 17:26:31,096:logger:../data/job_description_train_cleaned.json with version jdtrain_v1_cleaned Loaded
+2022-09-17 17:26:31,215:logger:../data/job_description_test_cleaned.json with version jdtest_v1_cleaned Loaded
+2022-09-17 17:26:53,786:logger:Values extracted.
+2022-09-17 17:26:59,028:logger:Rquest successful
+2022-09-17 17:27:01,793:logger:Values extracted.
+2022-09-17 17:27:08,224:logger:Rquest successful
+2022-09-17 17:27:13,138:logger:Rquest successful
+2022-09-17 17:27:21,774:logger:Values extracted.
+2022-09-17 17:27:26,451:logger:Rquest successful
+2022-09-17 17:27:31,288:logger:Rquest successful
+2022-09-17 17:27:36,349:logger:Rquest successful
+2022-09-17 17:27:40,889:logger:Rquest successful
+2022-09-17 17:29:11,534:logger:../data/job_description_train_cleaned.json with version jdtrain_v1_cleaned Loaded
+2022-09-17 17:29:14,645:logger:../data/job_description_test_cleaned.json with version jdtest_v1_cleaned Loaded
+2022-09-17 17:29:26,962:logger:Values extracted.
+2022-09-17 17:29:31,586:logger:Rquest successful
+2022-09-17 17:29:34,083:logger:Values extracted.
+2022-09-17 17:29:38,546:logger:Rquest successful
+2022-09-17 17:31:31,821:logger:Values extracted.
+2022-09-17 17:31:37,232:logger:Rquest successful
+2022-09-17 17:32:00,747:logger:Values extracted.
+2022-09-17 17:32:05,623:logger:Rquest successful
+2022-09-17 17:32:12,078:logger:Rquest successful
+2022-09-17 17:32:16,657:logger:Rquest successful
+2022-09-17 17:32:21,168:logger:Rquest successful
+2022-09-17 17:32:44,499:logger:Values extracted.
+2022-09-17 17:32:50,016:logger:Rquest successful
+2022-09-17 17:32:54,748:logger:Rquest successful
+2022-09-17 17:33:00,073:logger:Rquest successful

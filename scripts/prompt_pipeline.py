@@ -2,6 +2,11 @@ import sys
 import os
 import matplotlib.pyplot as plt
 from difflib import SequenceMatcher
+import mlflow
+import operator
+import cohere
+import random
+from dotenv import load_dotenv
 
 sys.path.append(os.path.abspath(os.path.join("./scripts/")))
 from logger import logger
@@ -13,6 +18,16 @@ class PromptPipeline():
         self.techniques_list = ['technique1']
         self.currernt_technique = currernt_technique
 
+    def set_up(self, inputval, data, model='xlarge', prompt_type=1,num_tokens=100, example_num=3):
+        self.inputval = inputval
+        self.data = data
+        self.model = model
+        self.num_tokens = num_tokens
+        self.example_num = example_num
+        self.prompt_type = prompt_type
+        API_KEY = os.getenv('API_KEY')
+        self.co = cohere.Client(API_KEY)
+
     def send_request_to_cohere(self, co, prompt, model='xlarge'):
         """
             Sends an API request to cohere and reuturns the response
@@ -21,7 +36,7 @@ class PromptPipeline():
             response = co.generate( 
                 model=model, 
                 prompt=prompt, 
-                max_tokens=400, 
+                max_tokens=self.num_tokens, 
                 temperature=0.5, 
                 k=0, 
                 p=1, 
@@ -33,6 +48,9 @@ class PromptPipeline():
             return response.generations[0].text
         except Exception as e:
             logger.error(e)
+
+    def preprocess(self):
+        self.inputval = str(self.inputval).strip().replace('/n', ' ')
 
     def get_tokens(self, data):
         """
@@ -111,6 +129,25 @@ class PromptPipeline():
                 pass
 
         return response_dict
+    
+    def prepare_prompt(self):
+        p_val = self.prompt_type
+        if p_val == 1:
+            prompt_data = []
+            similarity = {}
+            for i, d in enumerate(self.data):
+                similarity[i] = SequenceMatcher(None, self.inputval, d['document']).ratio()
+            sorted_dict = dict( sorted(similarity.items(), key=operator.itemgetter(1),reverse=True))
+            max_p = self.example_num
+            i = 0
+            for k,v in sorted_dict.items():
+                prompt_data.append(self.data[k])
+                i+=1
+                if i>=max_p: break
+            self.pr_data = self.extract_values(prompt_data)
+        else:
+            rand_items = random.sample(self.data, self.example_num)
+            self.pr_data = self.extract_values(rand_items)
 
     def get_prediction_similarity(self, token_dict, response_dict):
         """
@@ -190,6 +227,38 @@ class PromptPipeline():
         except Exception as e:
             logger.error(e)
     
-
-
-
+    def runpipeline(self, experiment_name, run_name):
+        try:
+            mlflow.set_experiment(experiment_name)
+            mlflow.set_tracking_uri('http://localhost:5000')
+            with mlflow.start_run(run_name=run_name):
+                mlflow.log_param('prompt_type', self.prompt_type)
+                mlflow.log_param('mode', self.model)
+                mlflow.log_param('num_tokens', self.num_tokens)
+                mlflow.log_param('example_num', self.example_num)
+                self.preprocess()
+                self.prepare_prompt()
+                prompt = self.pr_data
+                prompt+=f'Job Description: {self.inputval}'
+                response = self.send_request_to_cohere(self.co,prompt,model=self.model)
+                trial = 0
+                max_tries = 3
+                response = response.replace('--', '').strip()
+                mlflow.log_param('response', response)
+                print('Run - %s is logged to Experiment - %s' %
+                    (run_name, experiment_name))
+                print(response)
+                while len(response) < 10:
+                    trial+=1
+                    if trial > max_tries:
+                        break
+                    response = self.send_request_to_cohere(self.co,prompt,model=self.model)
+                    response = response.replace('--', '').strip()
+                if len(response) < 10:
+                    raise Exception("Can not get a meaningful response, please try to use different model")
+                else:
+                    if self.model=='xlarge':
+                        return self.process_response(response), True
+                    return response, False
+        except Exception as e:
+            logger.error(e)
