@@ -5,3 +5,4 @@ pandas==1.4.2
 python-dotenv==0.21.0
 cdifflib==1.2.6
 flask
+sklearn
