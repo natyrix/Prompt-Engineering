@@ -14,13 +14,14 @@ from logger import logger
 
 
 class JDPipeline():
-    def __init__(self, inputval, model='xlarge', prompt_type=1,num_tokens=100) -> None:
+    def __init__(self, inputval, model='xlarge', prompt_type=1,num_tokens=100, example_num=3) -> None:
         self.data = {}
         with open('./data/job_description_train_cleaned_1.json', 'r') as f:
             self.data = json.loads(f.read())
         self.inputval = inputval
         self.model = model
         self.num_tokens = num_tokens
+        self.example_num = example_num
         self.prompt_type = prompt_type
         API_KEY = os.getenv('API_KEY')
         self.co = cohere.Client(API_KEY)
@@ -63,7 +64,7 @@ class JDPipeline():
     def send_request(self):
         prompt = self.pr_data
         prompt+=f'Job Description: {self.inputval}'
-        logger.info(prompt)
+        # logger.info(prompt)
 
         # try:
         response = self.co.generate( 
@@ -94,7 +95,7 @@ class JDPipeline():
             for i, d in enumerate(self.data):
                 similarity[i] = SequenceMatcher(None, self.inputval, d['document']).ratio()
             sorted_dict = dict( sorted(similarity.items(), key=operator.itemgetter(1),reverse=True))
-            max_p = 3
+            max_p = self.example_num
             i = 0
             for k,v in sorted_dict.items():
                 prompt_data.append(self.data[k])
@@ -102,7 +103,7 @@ class JDPipeline():
                 if i>=max_p: break
             self.pr_data = self.extract_values(prompt_data)
         else:
-            rand_items = random.sample(self.data, 3)
+            rand_items = random.sample(self.data, self.example_num)
             self.pr_data = self.extract_values(rand_items)
     
 

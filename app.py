@@ -24,6 +24,7 @@ def home():
             ch_model = request.form['model']
             prompt_type = request.form['prompt_type']
             num_token = int(request.form['num_token'])
+            example_num = int(request.form['num_example'])
             # print(j_d)
             if len(j_d.strip()) == 0:
                 raise Exception("Job Description required")
@@ -31,7 +32,7 @@ def home():
                 model = 'xlarge'
                 if int(ch_model) != 1:
                     model = '544c8386-258a-4615-8fae-ce64d4255556-ft'
-                jdpipeline = JDPipeline(j_d, model=model, prompt_type=int(prompt_type), num_tokens=num_token)
+                jdpipeline = JDPipeline(j_d, model=model, prompt_type=int(prompt_type), num_tokens=num_token, example_num=example_num)
                 response,val = jdpipeline.make_request()
                 # print(jdpipeline.pr_data)
                 return render_template('home.html', title='Home', error_text='', response=response, process_dict=val)
@@ -79,6 +80,7 @@ def jdentities():
             ch_model = data.get('model') if data.get('model') else 'xlarge'
             pr_type = data.get('prompt_type') if data.get('prompt_type') else 1
             num_token = data.get('num_token') if data.get('num_token') else 100
+            num_example = data.get('num_example') if data.get('num_example') else 3
 
             if j_d:
                 model = 'xlarge'
@@ -89,9 +91,12 @@ def jdentities():
                 
                 if num_token < 100 or num_token > 250:
                     num_token = 100
+                
+                if num_example < 1 or num_example > 5:
+                    num_example = 3
 
                 if pr_type == 1 or pr_type == 2:
-                    jdpipeline = JDPipeline(j_d, model=model, prompt_type=int(pr_type), num_tokens=num_token)
+                    jdpipeline = JDPipeline(j_d, model=model, prompt_type=int(pr_type), num_tokens=num_token, example_num=num_example)
                     response,val = jdpipeline.make_request()
 
                     return jsonify({
