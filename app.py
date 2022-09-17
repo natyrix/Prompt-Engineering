@@ -9,7 +9,7 @@ import json
 
 sys.path.append(os.path.abspath(os.path.join("./scripts/")))
 from logger import logger
-from dashboard_pipeline import JDPipeline
+from dashboard_pipeline import JDPipeline, NewsPipeline
 
 app = Flask(__name__, static_folder='staticFiles') 
 
@@ -44,6 +44,30 @@ def home():
         
 
 
+@app.route('/news', methods=['POST'])
+def news():
+    try:
+        title = request.form['title']
+        body = request.form['body']
+        desc = request.form['description']
+        model = int(request.form['model'])
+        if len(title.strip()) == 0:
+            raise Exception("News title required")
+        
+        if len(body.strip()) == 0:
+            raise Exception("News body required")
+        
+        if len(desc.strip()) == 0:
+            raise Exception("News description required")
+        
+        news_pipeline = NewsPipeline(title, desc, body, model=model)
+        response = news_pipeline.make_score()
+        result = {
+            "score": response
+        }
+        return render_template('home.html', title='Home', error_text='', response=result, process_dict=True)
+    except Exception as e:
+        return render_template('home.html', title='Home', error_text=str(e))
 
 @app.route('/docs')
 def docs():
@@ -61,10 +85,29 @@ def bnewscore():
             "message": "Send news on post method to see results \n got to api/docs for more info"
         })
     else:
-        return jsonify({
-            "success": True,
-            "message": "POSTED ON NEWS"
-        })
+        try:
+            data = request.json 
+            title = data['title']
+            body = data['body']
+            desc = data['description']
+            model = data.get('model') if data.get('model') else 1
+            if title and body and desc:
+                news_pipeline = NewsPipeline(title, desc, body, model=model)
+                response = news_pipeline.make_score()
+                return jsonify({
+                    "success": True,
+                    "score": response
+                })
+            else:
+                return jsonify({
+                    "success": False,
+                    "message": "All fields are required"
+                })
+        except Exception as e:
+            return jsonify({
+                    "success": False,
+                    "message": str(e)
+                })
 
 @app.route('/api/jdentities', methods=['GET', 'POST'])
 def jdentities():
