@@ -80,6 +80,43 @@
       }
     </code>
 </pre>
+</div>
+<hr>
+            <div class="code">
+                <code>2. api/bnewscore</code>
+            </div>
+            <h5>Request: </h5>
+            <div class="code">
+<pre>
+    <code>
+    http://[ip_address]/api/bnewscore
+    json body
+        {
+            "title":"News Title",
+            "description":"News Description"
+            "body": "News content"
+            "model": 1 or 2  // 1-> Default or Use cohere.classify. 
+                             // 2-> Use cohere.embed.
+        }
+        
+    </code>
+</pre>
+
+            </div>
+            <h5>Response: </h5>
+            <div class="code">
+<pre>
+    <code>
+    http://[ip_address]/api/bnewscore
+    
+    {
+        "score": "0.00",
+        "success": true
+    }
+    </code>
+</pre>
+
           </div>
+        </div>
     </body>
 </html>
