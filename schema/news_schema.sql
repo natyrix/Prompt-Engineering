@@ -1,0 +1,21 @@
+CREATE TABLE `prompt_engineering_news` (
+  `index` bigint(20) DEFAULT NULL,
+  `Domain` text DEFAULT NULL,
+  `Title` text DEFAULT NULL,
+  `Description` text DEFAULT NULL,
+  `Body` text DEFAULT NULL,
+  `Link` text DEFAULT NULL,
+  `timestamp` text DEFAULT NULL,
+  `Analyst_Average_Score` double DEFAULT NULL,
+  `Analyst_Rank` bigint(20) DEFAULT NULL,
+  `Reference_Final_Score` double DEFAULT NULL,
+  `body_lower` text DEFAULT NULL,
+  `context_txt` text DEFAULT NULL,
+  `desc_lower` text DEFAULT NULL,
+  `desc_context_txt` text DEFAULT NULL,
+  `rank_1` text DEFAULT NULL,
+  `rank_2` text DEFAULT NULL,
+  `rank_3` text DEFAULT NULL,
+  `rank_4` text DEFAULT NULL,
+  `final_score` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
