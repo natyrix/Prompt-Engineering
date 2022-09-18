@@ -14,6 +14,7 @@ Prompt Engineering: In-context learning with GPT-3 and other Large Language Mode
     - [scripts](#scripts)
     - [tests](#tests)
     - [root folder](#root-folder)
+  - [Installation guide](#Installation-guide)
 
 ***
 
@@ -58,10 +59,26 @@ The repository has a number of files including python scripts, jupyter notebooks
 - Different python utility scripts that have different purposes.
 
 ### tests
-
+- `test_cleaner.py`: Unittest script for cleaning job description json data
 
 ### root folder
 - `requirements.txt`: a text file lsiting the projet's dependancies
 - `.gitignore`: a text file listing files and folders to be ignored
 - `README.md`: Markdown text with a brief explanation of the project and the repository structure.
+- `app.py`: Entry point of our flask application.
+
+
+## Installation guide
+Option 1
+```
+git clone https://github.com/natyrix/Prompt-Engineering
+cd Prompt-Engineering
+pip install -r requirements.txt 
+```
+Option 2
+```
+git clone https://github.com/natyrix/Prompt-Engineering
+cd Prompt-Engineering
+pip install .
+```
 
