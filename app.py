@@ -141,6 +141,9 @@ def jdentities():
                 if pr_type == 1 or pr_type == 2:
                     jdpipeline = JDPipeline(j_d, model=model, prompt_type=int(pr_type), num_tokens=num_token, example_num=num_example)
                     response,val = jdpipeline.make_request()
+                    # print("RESPONSE")
+                    # print(model)
+                    # print(response)
 
                     return jsonify({
                         "success": True,

@@ -43,17 +43,22 @@ class JDPipeline():
         trial = 0
         max_tries = 3
         response = response.replace('--', '').strip()
-        while len(response) < 10:
+        # print("MAKE REQUEST RESPONSE")
+        # print(response)
+        while len(str(response)) < 10:
             trial+=1
             if trial > max_tries:
                 break
             response = self.send_request()
             response = response.replace('--', '').strip()
-        if len(response) < 10:
+        if len(str(response)) < 10:
             raise Exception("Can not get a meaningful response, please try to use different model")
         else:
             if self.model=='xlarge':
-                return self.post_process(response), True
+                val = self.post_process(response)
+                if len(str(val)) < 10:
+                    return response, False
+                return val, True
             return response, False
 
     def post_process(self, response):
